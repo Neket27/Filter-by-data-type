@@ -19,7 +19,7 @@ class DataProcessor {
     }
 
     void processFiles() {
-        for (String fileName : config.inputFiles) {
+        for (String fileName : config.getInputFiles()) {
             try {
                 List<String> lines = Files.readLines(new File(fileName), StandardCharsets.UTF_8);
                 lines.forEach(dataStorage::addData);
@@ -32,7 +32,7 @@ class DataProcessor {
     void writeResults() {
         try {
             for (DataType type : DataType.values()) {
-                dataStorage.writeToFile(getOutputFilePath(type.getFileName()), type, config.appendMode);
+                dataStorage.writeToFile(getOutputFilePath(type.getFileName()), type, config.isAppendMode());
             }
         } catch (IOException e) {
             System.err.println("Failed to write output files: " + e.getMessage());
@@ -40,11 +40,11 @@ class DataProcessor {
     }
 
     void printStatistics() {
-        dataStorage.printStatistics(config.fullStats);
+        dataStorage.printStatistics(config.isFullStats());
     }
 
     private String getOutputFilePath(String fileName) {
-        Path path = config.outputPath.isEmpty() ? Paths.get(config.prefix + fileName) : Paths.get(config.outputPath, config.prefix + fileName);
+        Path path = config.getOutputPath().isEmpty() ? Paths.get(config.getPrefix() + fileName) : Paths.get(config.getOutputPath(), config.getPrefix() + fileName);
         return path.toString();
     }
 }

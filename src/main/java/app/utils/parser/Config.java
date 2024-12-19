@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Config {
-    String outputPath = "";
-    String prefix = "";
-    boolean appendMode = false;
-    boolean fullStats = false;
-    List<String> inputFiles = new ArrayList<>();
+    private String outputPath = "";
+    private String prefix = "";
+    private boolean appendMode = false;
+    private boolean fullStats = false;
+    private List<String> inputFiles = new ArrayList<>();
+
+
 
     static Config parseArguments(String[] args) {
         Config config = new Config();
@@ -34,5 +36,25 @@ class Config {
             }
         }
         return config;
+    }
+
+    public String getOutputPath() {
+        return outputPath;
+    }
+
+    public String getPrefix() {
+        return prefix;
+    }
+
+    public boolean isAppendMode() {
+        return appendMode;
+    }
+
+    public boolean isFullStats() {
+        return fullStats;
+    }
+
+    public List<String> getInputFiles() {
+        return inputFiles;
     }
 }
