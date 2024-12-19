@@ -21,10 +21,15 @@ java -jar <path>/FileContentFilteringUtility-1.0-SNAPSHOT.jar -f <inputFile>
 
 
 #mvn -version
+
 Apache Maven 3.8.7
+
 Maven home: /usr/share/maven
+
 Java version: 17.0.13, vendor: Debian, runtime: /usr/lib/jvm/java-17-openjdk-amd64
+
 Default locale: ru_RU, platform encoding: UTF-8
+
 OS name: "linux", version: "6.1.0-25-amd64", arch: "amd64", family: "unix"         
 
 Доп. библиотеки com.google.guava и junit5
