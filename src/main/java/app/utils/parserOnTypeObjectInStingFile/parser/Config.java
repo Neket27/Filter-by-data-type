@@ -1,4 +1,4 @@
-package app.utils.parser;
+package app.utils.parserOnTypeObjectInStingFile.parser;
 
 import java.util.ArrayList;
 import java.util.List;

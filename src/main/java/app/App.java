@@ -1,6 +1,6 @@
 package app;
 
-import app.utils.parser.Parser;
+import app.utils.parserOnTypeObjectInStingFile.parser.Parser;
 
 public class App {
 
