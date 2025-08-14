@@ -2,7 +2,7 @@
 
 Пример запуска улитилы с помощью jar файла:
 java -jar <path>/FileContentFilteringUtility-1.0-SNAPSHOT.jar -f <inputFile>
-![Screenshot_20241219_231605](https://github.com/user-attachments/assets/1cba5e28-9573-488b-94af-64e29dc66b58)
+<img width="1252" height="618" alt="2025-08-14_20-25" src="https://github.com/user-attachments/assets/d42b1563-fdc1-4fee-bbef-e090d345b4ce" />
 
 #Параметры программы
 По умолчанию файлы результатов перезаписываются. Однако с помощью параметра -a можно настроить режим добавления новых данных в существующие файлы.
